@@ -1,0 +1,14 @@
+
+
+
+<!--[(ngModel)]="show"  -->
+
+
+<mat-form-field>
+  <mat-label></mat-label>
+  <input placeholder="Enter a show name"  *ngFor="let show of shows">
+   <span>{{show.name}}</span>
+    <span>{{show.genre}}</span>
+    <span><img [src]="show.image" /></span>
+  
+</mat-form-field>
