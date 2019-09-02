@@ -9,13 +9,15 @@ import { ServiceallshowService } from '../serviceallshow/serviceallshow.service'
 })
 export class AllshowComponent implements OnInit {
 
-  shows: Allshowinfo
   
+  
+  shows:Allshowinfo[] = [];
 
   constructor(private showservice: ServiceallshowService) { }
 
   ngOnInit() {
-    this.showservice.getmyshow('girls').subscribe(data => this.shows=data);
+    this.showservice.getmyshow('girls').subscribe(data => this.shows.push(data));
+    
     
   }
 
