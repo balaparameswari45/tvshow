@@ -1,6 +1,6 @@
 export interface Allshowinfo {
   name:string;  
-  genre:string;
+  genre:any;
   image: string;
 }
 

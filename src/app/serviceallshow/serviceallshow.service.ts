@@ -37,7 +37,10 @@ export class ServiceallshowService {
     if (data != null && data.length > 0) {
       var shows: Allshowinfo[] = [];
       data.forEach(show => {
-        var allTheGenres = "";
+        var allgenre = show.show.genres;
+        console.log(allgenre);
+        
+
         let element: Allshowinfo = {
           name: show.show.name,
           genre: show.show.genres != null ? show.show.genres : "def", //TODO Construct csv string for the genres
