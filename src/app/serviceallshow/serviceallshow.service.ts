@@ -40,8 +40,8 @@ export class ServiceallshowService {
         var allTheGenres = "";
         let element: Allshowinfo = {
           name: show.show.name,
-          genre: show.show.genres != null ? " abc " : "def", //TODO Construct csv string for the genres
-          image: show.show.image!=null ?show.show.image.medium:' '
+          genre: show.show.genres != null ? show.show.genres : "def", //TODO Construct csv string for the genres
+          image: show.show.image != null ? show.show.image.medium : " "
         };
         shows.push(element);
       });
